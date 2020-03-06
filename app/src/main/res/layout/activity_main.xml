@@ -1,51 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="30dp"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
     tools:context=".MainActivity"
+
     android:orientation="vertical">
+    <LinearLayout
+        android:background="@drawable/editshape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:ccp_countryPreference="us,in"
+            app:ccp_autoFormatNumber="true"
+            app:ccp_autoDetectCountry="true"
+            />
+
+       <androidx.appcompat.widget.AppCompatEditText
+           android:id="@+id/number_tv"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           style="outlined"
+           android:hint="phone number"
+           android:inputType="phone"
+           android:singleLine="true"/>
+
+
+
+
+
+    </LinearLayout>
+
 
     <EditText
-        android:id="@+id/inputText"
-        android:layout_width="237dp"
-        android:layout_height="44dp"
-        android:layout_gravity="center"
-        android:hint="Enter Phone Number"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.44"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.125" />
 
-    <EditText
+        android:layout_margin="10dp"
         android:id="@+id/messageTV"
-        android:layout_width="224dp"
-        android:layout_height="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
         android:layout_gravity="center"
-        android:hint="Tyoe Your Message here"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.275" />
+        android:hint="Type Your Message here"
+        android:background="@drawable/editshape"
+ />
 
     <Button
+        android:background="@drawable/editshape"
+        android:layout_marginStart="10dp"
+        android:layout_gravity="center_horizontal"
         android:id="@+id/buttonSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Text Number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.462"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.474" />
+        android:text="Text with Number"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+         />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
