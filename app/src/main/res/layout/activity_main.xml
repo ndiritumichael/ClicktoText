@@ -6,11 +6,13 @@
     android:layout_height="wrap_content"
     android:paddingBottom="30dp"
     android:paddingStart="20dp"
+    android:background="@android:color/darker_gray"
     android:paddingEnd="20dp"
     tools:context=".MainActivity"
 
     android:orientation="vertical">
     <LinearLayout
+        android:layout_margin="10dp"
         android:background="@drawable/editshape"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,13 +56,17 @@
  />
 
     <Button
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
         android:background="@drawable/editshape"
         android:layout_marginStart="10dp"
         android:layout_gravity="center_horizontal"
         android:id="@+id/buttonSend"
-        android:layout_width="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Text the Number"
         android:layout_height="wrap_content"
-        android:text="Text with Number"
+        android:textColor="@android:color/white"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
          />
